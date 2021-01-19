@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="746.0" prefWidth="1042.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <tabs>
+    <Tab text="Add / Remove">
+         <content>
+            <Pane prefHeight="703.0" prefWidth="1042.0">
+               <children>
+                  <TextField fx:id="floorNum" layoutX="128.0" layoutY="76.0" promptText="e.g.1" />
+                  <ChoiceBox fx:id="securityLevel" layoutX="127.0" layoutY="109.0" prefWidth="150.0" />
+                  <TextField fx:id="aisleFloorNum" layoutX="128.0" layoutY="199.0" promptText="e.g.1" />
+                  <TextField fx:id="aisleId" layoutX="128.0" layoutY="229.0" promptText="e.g.K7" />
+                  <Label layoutX="446.0" layoutY="14.0" text="WAREHOUSE MANAGMENT" />
+                  <Label layoutX="24.0" layoutY="80.0" text="Floor Number :" />
+                  <Label layoutX="25.0" layoutY="113.0" text="Security Level :" />
+                  <Label layoutX="17.0" layoutY="144.0" text="Temperature in °C  : " />
+                  <ChoiceBox fx:id="floorTemp" layoutX="129.0" layoutY="140.0" prefWidth="150.0" />
+                  <Label layoutX="8.0" layoutY="203.0" text=" Aisle Floor Number :" />
+                  <Label layoutX="50.0" layoutY="233.0" text="Aisle ID :" />
+                  <TextField fx:id="aisleWidth" layoutX="128.0" layoutY="261.0" prefHeight="25.0" prefWidth="61.0" promptText="Width" />
+                  <TextField fx:id="shelfAisleId" layoutX="130.0" layoutY="358.0" promptText="e.g.K7" />
+                  <TextField fx:id="shelfNum" layoutX="128.0" layoutY="392.0" promptText="e.g. 03" />
+                  <Label layoutX="50.0" layoutY="327.0" />
+                  <Label layoutX="9.0" layoutY="362.0" text="Shelf Aisle ID :" />
+                  <Label layoutX="23.0" layoutY="396.0" text="Shelf Number :" />
+                  <Label layoutX="18.0" layoutY="265.0" text="Aisle Dimension :" />
+                  <TextField fx:id="palletAisleId" layoutX="127.0" layoutY="464.0" promptText="e.g.K7" />
+                  <TextField fx:id="palletShelfNum" layoutX="127.0" layoutY="496.0" promptText="e.g.03" />
+                  <TextField fx:id="palletDescription" layoutX="127.0" layoutY="528.0" promptText="e.g Fragile" />
+                  <TextField fx:id="palletQuantity" layoutX="127.0" layoutY="560.0" promptText="e.g. 500" />
+                  <TextField fx:id="palletMinTemp" layoutX="127.0" layoutY="592.0" promptText="e.g  10" />
+                  <Label layoutX="22.0" layoutY="468.0" text="Pallet Aisle ID :" />
+                  <Label layoutX="5.0" layoutY="500.0" text="Pallet Shelf Number :" />
+                  <Label layoutX="30.0" layoutY="528.0" text="Description :" />
+                  <Label layoutX="47.0" layoutY="564.0" text="Quantity :" />
+                  <Label layoutX="43.0" layoutY="596.0" text="Min Temp :" />
+                  <Label layoutX="42.0" layoutY="626.0" text="Max Temp :" />
+                  <TextField fx:id="palletMaxTemp" layoutX="127.0" layoutY="622.0" promptText="e.g 35" />
+                  <Button fx:id="addFloor" layoutX="331.0" layoutY="140.0" mnemonicParsing="false" onAction="#addFloor" text="Add Floor" />
+                  <Button fx:id="addAisle" layoutX="331.0" layoutY="261.0" mnemonicParsing="false" onAction="#addAisle" text="Add Aisle" />
+                  <Button fx:id="addShelf" layoutX="330.0" layoutY="392.0" mnemonicParsing="false" onAction="#addShelf" text="Add Shelf" />
+                  <Button fx:id="addPallet" layoutX="330.0" layoutY="622.0" mnemonicParsing="false" onAction="#addPallet" text="Add Pallet" />
+                  <Label layoutX="170.0" layoutY="46.0" text="ADD FLOOR" />
+                  <Label layoutX="174.0" layoutY="174.0" text="ADD AISLE" />
+                  <Label layoutX="174.0" layoutY="327.0" text="ADD SHELF" />
+                  <Label layoutX="168.0" layoutY="436.0" text="ADD PALLET" />
+                  <Label layoutX="39.0" layoutY="660.0" text="Pallet Value :" />
+                  <Button fx:id="smartAddPallet" layoutX="330.0" layoutY="656.0" mnemonicParsing="false" onAction="#smartAddPallet" text="Smart Add Pallet" />
+                  <ChoiceBox fx:id="palletValue" layoutX="127.0" layoutY="656.0" prefWidth="150.0" />
+                  <TextField fx:id="deletePalletShelfNum" layoutX="772.0" layoutY="496.0" promptText="e.g.03" />
+                  <TextField fx:id="deletePalletAisleId" layoutX="772.0" layoutY="464.0" promptText="e.g.K7" />
+                  <TextField fx:id="deletePalletDescription" layoutX="772.0" layoutY="528.0" promptText="e.g Fragile" />
+                  <Label layoutX="663.0" layoutY="468.0" text="Pallet Aisle ID :" />
+                  <Label layoutX="646.0" layoutY="500.0" text="Pallet Shelf Number :" />
+                  <Label layoutX="663.0" layoutY="528.0" text="Description :" />
+                  <Button fx:id="removePallet" layoutX="936.0" layoutY="528.0" mnemonicParsing="false" onAction="#removePallet" text="Remove Pallet" />
+                  <Button fx:id="load" layoutX="446.0" layoutY="34.0" mnemonicParsing="false" onAction="#load" prefHeight="25.0" prefWidth="60.0" text="LOAD" />
+                  <Button fx:id="save" layoutX="535.0" layoutY="34.0" mnemonicParsing="false" onAction="#save" prefHeight="25.0" prefWidth="60.0" text="SAVE" />
+                  <Label layoutX="803.0" layoutY="436.0" text="REMOVE PALLET" />
+                  <TextField fx:id="aisleDepth" layoutX="204.0" layoutY="261.0" prefHeight="25.0" prefWidth="72.0" promptText="Depth" />
+               </children>
+            </Pane>
+         </content></Tab>
+    <Tab text="View">
+         <content>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="446.0" layoutY="14.0" text="WAREHOUSE MANAGEMENT" />
+                  <Button fx:id="load1" layoutX="446.0" layoutY="31.0" mnemonicParsing="false" onAction="#load" prefHeight="25.0" prefWidth="60.0" text="LOAD" />
+                  <Button fx:id="save1" layoutX="535.0" layoutY="31.0" mnemonicParsing="false" onAction="#save" prefHeight="25.0" prefWidth="60.0" text="SAVE" />
+                  <Button fx:id="viewAllButton" layoutX="65.0" layoutY="296.0" mnemonicParsing="false" onAction="#viewStock" prefHeight="25.0" prefWidth="140.0" text="View All Stock" />
+                  <TreeView fx:id="treeView" layoutX="414.0" layoutY="127.0" prefHeight="275.0" prefWidth="601.0" />
+                  <Button fx:id="searchButton" layoutX="221.0" layoutY="368.0" mnemonicParsing="false" onAction="#searchForGoods" prefHeight="25.0" prefWidth="142.0" text="Search" />
+                  <TextField fx:id="searchForGoods" layoutX="65.0" layoutY="368.0" />
+                  <Label layoutX="188.0" layoutY="265.0" text="List all Stock" />
+                  <Label layoutX="139.0" layoutY="342.0" text="Search for Goods by Name" />
+                  <Label layoutX="153.0" layoutY="14.0" text="Reset Warehouse Managment" />
+                  <Button fx:id="reset" layoutX="174.0" layoutY="37.0" mnemonicParsing="false" onAction="#reset" prefHeight="25.0" prefWidth="118.0" text="RESET" textFill="RED">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <ListView fx:id="viewAll" layoutX="28.0" layoutY="410.0" prefHeight="293.0" prefWidth="987.0" />
+                  <Button fx:id="drillDown" layoutX="240.0" layoutY="296.0" mnemonicParsing="false" onAction="#drillDown" prefHeight="25.0" prefWidth="128.0" text="Drill Down" />
+               </children>
+            </Pane>
+         </content></Tab>
+  </tabs>
+</TabPane>
